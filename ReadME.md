@@ -6,6 +6,9 @@ Ce projet est une implémentation du classique jeu Snake en JavaScript, HTML et 
 
 Le tableau des scores est généré à partir d'une API pour les utilisateurs, et les scores sont générés de manière aléatoire intra-code.
 
+Le jeu peut être joué sur Dekstop comme sur Mobile.
+
+
 ## Fonctionnalités
 
 - Contrôle du serpent via les flèches directionnelles du clavier.

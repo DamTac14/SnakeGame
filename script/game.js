@@ -21,14 +21,22 @@ export class Game {
     init() {
         this.canvas.classList.remove('-defeat');
         document.addEventListener('keydown', (direction) => this.snake.changeDirection(direction.key));
-        
-        document.getElementById('up-btn').addEventListener('click', () => this.snake.changeDirection('UP'));
-        document.getElementById('left-btn').addEventListener('click', () => this.snake.changeDirection('LEFT'));
-        document.getElementById('right-btn').addEventListener('click', () => this.snake.changeDirection('RIGHT'));
-        document.getElementById('down-btn').addEventListener('click', () => this.snake.changeDirection('DOWN'));
-        
+    
+        const handleInput = (event, direction) => {
+            // Empêche le comportement par défaut (comme le zoom sur les écrans tactiles que j'ai eu en retour lors des tests utilisateurs)
+            event.preventDefault(); 
+            this.snake.changeDirection(direction);
+        };
+    
+        ['up', 'left', 'right', 'down'].forEach(direction => {
+            const btn = document.getElementById(`${direction}-btn`);
+            btn.addEventListener('touchstart', (e) => handleInput(e, direction.toUpperCase()));
+            btn.addEventListener('click', (e) => handleInput(e, direction.toUpperCase()));
+        });
+    
         this.startGame();
     }
+    
 
     startGame() {
         this.stopGame();

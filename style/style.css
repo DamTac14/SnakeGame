@@ -58,6 +58,14 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .rules-btn-content {
+        top: 190px;
+    }
+}
+
+
+
 #game-container {
     position: relative;
     text-align: center;

@@ -21,24 +21,34 @@
             </br>Utilisez les flèches de votre clavier pour vous déplacer.</p>
         </div>
     </div>
-    <div id="game-container">
-        <canvas id="gameCanvas"></canvas>
-        <div id="form-container" class="hidden">
-            <form id="score-form">
-                <label for="player-name">Entrez votre pseudonyme :</label>
-                <input type="text" id="player-name" minlength="6" maxlength="20" required>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-        <div id="scoreboard">
-            <h2>Tableau des scores</h2>
-        </div>
+<div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+    <div id="direction-buttons" class="hidden">
+        <button class="direction-btn" id="left-btn">←</button>
+        <button class="direction-btn" id="up-btn">↑</button>
+        <button class="direction-btn" id="right-btn">→</button>
+        <button class="direction-btn" id="down-btn">↓</button>
     </div>
+    <div id="form-container" class="hidden">
+        <form id="score-form">
+            <label for="player-name">Entrez votre pseudonyme :</label>
+            <input type="text" id="player-name" minlength="6" maxlength="20" required>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <div id="scoreboard">
+        <h2>Tableau des scores</h2>
+    </div>
+    <div id="retry-container" class="hidden">
+        <p>Vous avez perdu! Voulez-vous essayer à nouveau?</p>
+        <button id="retry-button">Recommencer</button>
+    </div>
+</div>
+
 <div id="retry-container" class="hidden">
     <p>Vous avez perdu! Voulez-vous essayer à nouveau?</p>
     <button id="retry-button">Recommencer</button>
 </div>
-
 
 </body>
 </html>

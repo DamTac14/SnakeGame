@@ -141,3 +141,41 @@ canvas.-defeat {
     border-bottom: 1px solid transparent; 
     border-image: linear-gradient(to left, transparent, #00bfff, transparent) 1; 
 }
+
+
+
+
+#direction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px; /* Espacement entre le canevas et les boutons */
+}
+
+.direction-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: 2px solid #333;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.direction-btn:active {
+    background-color: #d0d0d0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    #direction-buttons {
+        display: none;
+    }
+}

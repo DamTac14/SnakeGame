@@ -164,13 +164,10 @@ canvas.-defeat {
     align-items: center;
     gap: 10px;
     margin-top: 10px; 
-<<<<<<< Updated upstream
 }
 
 #direction-buttons-bottom {
     display: flex;
-=======
->>>>>>> Stashed changes
 }
 
 .direction-btn {

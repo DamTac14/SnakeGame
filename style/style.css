@@ -160,9 +160,14 @@ canvas.-defeat {
 
 #direction-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    margin-top: 10px; /* Espacement entre le canevas et les boutons */
+    margin-top: 10px; 
+}
+
+#direction-buttons-bottom {
+    display: flex;
 }
 
 .direction-btn {

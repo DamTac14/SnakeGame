@@ -96,6 +96,7 @@ export class Game {
         if (retryContainer) {
             retryContainer.style.display = 'none';
         }
+        document.getElementById('form-container').classList.add('hidden');
         this.score = 0;
         this.snake = new Snake(this.context, this.canvas.width, this.canvas.height); 
         this.fruit = new Fruit(this.canvas.width, this.canvas.height); 

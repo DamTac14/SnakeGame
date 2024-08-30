@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="module" src="./script/script.js" defer></script>
+</head>
+<body>
+    <div class="rules-btn-content">
+        <button id="toggle-rules-btn">Afficher les règles</button>
+    </div>
+
+    <div id="rules-container" class="hidden">
+        <div class="rules-content">
+            <h2>Règles du Jeu</h2>
+            <p>Utilisez les flèches directionnelles pour déplacer le serpent. </br>
+            Mangez les fruits pour agrandir votre serpent. </br>
+            Lorsque vous mangez votre queue, vous perdez.
+            </br>Utilisez les flèches de votre clavier pour vous déplacer.</p>
+        </div>
+    </div>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="form-container" class="hidden">
+            <form id="score-form">
+                <label for="player-name">Entrez votre pseudonyme :</label>
+                <input type="text" id="player-name" minlength="6" maxlength="20" required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <div id="scoreboard">
+            <h2>Tableau des scores</h2>
+        </div>
+    </div>
+<div id="retry-container" class="hidden">
+    <p>Vous avez perdu! Voulez-vous essayer à nouveau?</p>
+    <button id="retry-button">Recommencer</button>
+</div>
+
+
+</body>
+</html>

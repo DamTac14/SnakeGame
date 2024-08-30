@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+.rules-btn-content {
+    position: absolute;
+    top: 170px;
+}
+
+#toggle-rules-btn, #score-form button, #retry-button {
+    background-color: #1e1e1e; 
+    color: #00bfff; 
+    border: 1px solid #00bfff; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#toggle-rules-btn:hover, #score-form button:hover, #retry-button:hover {
+    background-color: #00bfff; 
+    color: #1e1e1e; 
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8); 
+}
+
+
+#rules-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    z-index: 1000; 
+}
+
+#rules-container.hidden {
+    display: none;
+}
+
+#rules-container h2 {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+#rules-container p {
+    margin: 5px 0;
+}
+
+
+#game-container {
+    position: relative;
+    text-align: center;
+}
+
+canvas {
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.8); 
+}
+
+canvas.-defeat {
+    border: 2px solid red; 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); 
+}
+
+#scoreboard {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+    width: 300px; 
+    background-color: rgba(39, 39, 39, 0.8); 
+    border: 2px solid #00bfff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8); 
+    text-align: left; 
+    font-family: Arial, sans-serif; 
+    overflow-y: auto; 
+    max-height: 80vh; 
+}
+
+#form-container {
+    color: #fff; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+#score-form label {
+    color: #fff; 
+}
+
+#form-container.hidden {
+    display: none;
+}
+
+#score-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    color: white;
+}
+
+
+
+#retry-container {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    width: 300px; 
+    padding: 20px; 
+    background-color: #00000093; 
+    color: white; 
+    text-align: center; 
+    border-radius: 10px; 
+    display: none; 
+}
+
+#scoreboard span {
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent; 
+    border-image: linear-gradient(to left, transparent, #00bfff, transparent) 1; 
+}
